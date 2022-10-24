@@ -1,0 +1,5 @@
+---
+projectName: Dz Standard Library
+dependencies:
+- https://github.com/wurstscript/WurstStdlib2/tree/pre1.29
+buildMapData: {}
