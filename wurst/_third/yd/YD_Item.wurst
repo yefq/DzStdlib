@@ -1,0 +1,11 @@
+package YD_Item
+import NoWurst
+
+public constant ITEM_DATA_ART         = 1 // 图标
+public constant ITEM_DATA_TIP         = 2 // 提示
+public constant ITEM_DATA_UBERTIP     = 3 // 提示(扩展)
+public constant ITEM_DATA_NAME        = 4 // 名字
+public constant ITEM_DATA_DESCRIPTION = 5 // 说明
+
+public native EXGetItemDataString(int itemcode, int data_type) returns string
+public native EXSetItemDataString(int itemcode, int data_type, string value) returns bool

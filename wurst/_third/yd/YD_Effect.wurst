@@ -1,0 +1,16 @@
+package YD_Effect
+import NoWurst
+
+public native EXGetEffectX       (effect e) returns real
+public native EXGetEffectY       (effect e) returns real
+public native EXGetEffectZ       (effect e) returns real
+public native EXSetEffectXY      (effect e, real x, real y)
+public native EXSetEffectZ       (effect e, real z)
+public native EXGetEffectSize    (effect e) returns real
+public native EXSetEffectSize    (effect e, real size)
+public native EXEffectMatRotateX (effect e, real angle)
+public native EXEffectMatRotateY (effect e, real angle)
+public native EXEffectMatRotateZ (effect e, real angle)
+public native EXEffectMatScale   (effect e, real x, real y, real z)
+public native EXEffectMatReset   (effect e)
+public native EXSetEffectSpeed   (effect e, real speed)

@@ -1,0 +1,36 @@
+package DZ_API
+import NoWurst
+
+native DzAPI_Map_SaveServerValue         (player whichPlayer, string key, string value)  returns bool
+native DzAPI_Map_GetServerValue          (player whichPlayer, string key)  returns string
+native DzAPI_Map_Ladder_SetStat          (player whichPlayer, string key, string value)
+native DzAPI_Map_IsRPGLadder             () returns bool
+native DzAPI_Map_GetGameStartTime        () returns int
+native DzAPI_Map_Stat_SetStat            (player whichPlayer, string key, string value)
+native DzAPI_Map_GetMatchType      		 () returns int
+native DzAPI_Map_Ladder_SetPlayerStat    (player whichPlayer, string key, string value)
+native DzAPI_Map_GetServerValueErrorCode (player whichPlayer)  returns int
+native DzAPI_Map_GetLadderLevel          (player whichPlayer)  returns int
+native DzAPI_Map_IsRedVIP                (player whichPlayer)  returns bool
+native DzAPI_Map_IsBlueVIP               (player whichPlayer)  returns bool
+native DzAPI_Map_GetLadderRank           (player whichPlayer)  returns int
+native DzAPI_Map_GetMapLevelRank         (player whichPlayer)  returns int
+native DzAPI_Map_GetGuildName            (player whichPlayer)  returns string
+native DzAPI_Map_GetGuildRole            (player whichPlayer)  returns int
+native DzAPI_Map_IsRPGLobby              () returns bool
+native DzAPI_Map_GetMapLevel             (player whichPlayer)  returns int
+native DzAPI_Map_MissionComplete         (player whichPlayer, string key, string value)
+native DzAPI_Map_GetActivityData         () returns string
+native DzAPI_Map_GetMapConfig            (string key)  returns string
+native DzAPI_Map_HasMallItem             (player whichPlayer, string key)  returns bool
+native DzAPI_Map_SavePublicArchive       (player whichPlayer, string key, string value)  returns bool
+native DzAPI_Map_GetPublicArchive        (player whichPlayer, string key)  returns string
+native DzAPI_Map_UseConsumablesItem      (player whichPlayer, string key)
+native DzAPI_Map_OrpgTrigger             (player whichPlayer, string key)
+native DzAPI_Map_GetServerArchiveDrop    (player whichPlayer, string key)  returns string
+native DzAPI_Map_GetServerArchiveEquip   (player whichPlayer, string key)  returns int
+native RequestExtraIntegerData           (int dataType, player whichPlayer, string param1, string param2, bool param3, int param4, int param5, int param6)  returns int
+native RequestExtraBooleanData           (int dataType, player whichPlayer, string param1, string param2, bool param3, int param4, int param5, int param6)  returns bool
+native RequestExtraStringData            (int dataType, player whichPlayer, string param1, string param2, bool param3, int param4, int param5, int param6)  returns string
+native RequestExtraRealData              (int dataType, player whichPlayer, string param1, string param2, bool param3, int param4, int param5, int param6)  returns real
+native DzAPI_Map_GetPlatformVIP          (player whichPlayer)  returns int

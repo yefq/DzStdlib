@@ -1,0 +1,4 @@
+package YD_Scripts
+import NoWurst
+
+public native EXExecuteScript (string script) returns string

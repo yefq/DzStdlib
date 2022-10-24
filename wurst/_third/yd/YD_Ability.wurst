@@ -1,0 +1,66 @@
+package YD_Ability
+import NoWurst
+
+public tuple abilDataI(int id)
+public tuple abilDataR(int id)
+public tuple abilDataS(int id)
+
+// state
+public constant int ABILITY_STATE_COOLDOWN         = 1
+
+// real
+public constant ABILITY_DATA_CAST              = abilDataR(101)
+public constant ABILITY_DATA_DUR               = abilDataR(102)
+public constant ABILITY_DATA_HERODUR           = abilDataR(103)
+public constant ABILITY_DATA_COOL              = abilDataR(105)
+public constant ABILITY_DATA_AREA              = abilDataR(106)
+public constant ABILITY_DATA_RNG               = abilDataR(107)
+public constant ABILITY_DATA_A                 = abilDataR(108)
+public constant ABILITY_DATA_B                 = abilDataR(109)
+public constant ABILITY_DATA_C                 = abilDataR(110)
+public constant ABILITY_DATA_D                 = abilDataR(111)
+public constant ABILITY_DATA_E                 = abilDataR(112)
+public constant ABILITY_DATA_F                 = abilDataR(113)
+public constant ABILITY_DATA_G                 = abilDataR(114)
+public constant ABILITY_DATA_H                 = abilDataR(115)
+public constant ABILITY_DATA_I                 = abilDataR(116)
+
+// int
+public constant ABILITY_DATA_TARGS             = abilDataI(100)
+public constant ABILITY_DATA_COST              = abilDataI(104)
+public constant ABILITY_DATA_UNITID            = abilDataI(117)
+public constant ABILITY_DATA_HOTKET            = abilDataI(200)
+public constant ABILITY_DATA_UNHOTKET          = abilDataI(201)
+public constant ABILITY_DATA_RESEARCH_HOTKEY   = abilDataI(202)
+
+// string
+public constant ABILITY_DATA_NAME              = abilDataS(203)
+public constant ABILITY_DATA_ART               = abilDataS(204)
+public constant ABILITY_DATA_TARGET_ART        = abilDataS(205)
+public constant ABILITY_DATA_CASTER_ART        = abilDataS(206)
+public constant ABILITY_DATA_EFFECT_ART        = abilDataS(207)
+public constant ABILITY_DATA_AREAEFFECT_ART    = abilDataS(208)
+public constant ABILITY_DATA_MISSILE_ART       = abilDataS(209)
+public constant ABILITY_DATA_SPECIAL_ART       = abilDataS(210)
+public constant ABILITY_DATA_LIGHTNING_EFFECT  = abilDataS(211)
+public constant ABILITY_DATA_BUFF_TIP          = abilDataS(212)
+public constant ABILITY_DATA_BUFF_UBERTIP      = abilDataS(213)
+public constant ABILITY_DATA_RESEARCH_TIP      = abilDataS(214)
+public constant ABILITY_DATA_TIP               = abilDataS(215)
+public constant ABILITY_DATA_UNTIP             = abilDataS(216)
+public constant ABILITY_DATA_RESEARCH_UBERTIP  = abilDataS(217)
+public constant ABILITY_DATA_UBERTIP           = abilDataS(218)
+public constant ABILITY_DATA_UNUBERTIP         = abilDataS(219)
+public constant ABILITY_DATA_UNART             = abilDataS(220)
+
+public native EXGetUnitAbility        (unit u, int abilcode) returns ability
+public native EXGetUnitAbilityByIndex (unit u, int index) returns ability
+public native EXGetAbilityId          (ability abil) returns int
+public native EXGetAbilityState       (ability abil, int state_type) returns real
+public native EXSetAbilityState       (ability abil, int state_type, real value) returns bool
+public native EXGetAbilityDataReal    (ability abil, int level, int data_type) returns real
+public native EXSetAbilityDataReal    (ability abil, int level, int data_type, real value) returns bool
+public native EXGetAbilityDataInteger (ability abil, int level, int data_type) returns int
+public native EXSetAbilityDataInteger (ability abil, int level, int data_type, int value) returns bool
+public native EXGetAbilityDataString  (ability abil, int level, int data_type) returns string
+public native EXSetAbilityDataString  (ability abil, int level, int data_type, string value) returns bool

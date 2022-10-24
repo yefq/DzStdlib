@@ -1,0 +1,33 @@
+package YD_Slk
+import NoWurst
+import YD_Scripts
+
+tuple Slk(string slk)
+
+// (require'jass.slk').slk[id].name
+public let SLK_ABIL = Slk("ability")
+public let SLK_BUFF = Slk("buff")
+public let SLK_UNIT = Slk("unit")
+public let SLK_ITEM = Slk("item")
+public let SLK_UPGR = Slk("upgrade")
+public let SLK_DOOD = Slk("doodad")
+public let SLK_DEST = Slk("destructable")
+public let SLK_MISC = Slk("misc")
+
+public function Slk.loadStr(int id, string key) returns string
+    return EXExecuteScript("(require'jass.slk')." + this.slk + "[" + I2S(id) + "]." + key)
+
+public function Slk.loadStr(string key) returns string
+    return EXExecuteScript("(require'jass.slk')." + this.slk + "." + key)
+
+public function Slk.loadReal(int id, string key) returns real
+    return S2R(this.loadStr(id, key))
+
+public function Slk.loadReal(string key) returns real
+    return S2R(this.loadStr(key))
+
+public function Slk.loadInt(int id, string key) returns int
+    return S2I(this.loadStr(id, key))
+
+public function Slk.loadInt(string key) returns int
+    return S2I(this.loadStr(key))

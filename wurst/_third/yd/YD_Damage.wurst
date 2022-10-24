@@ -1,0 +1,13 @@
+package YD_Damage
+import NoWurst
+
+public constant int EVENT_DAMAGE_DATA_VAILD       = 0
+public constant int EVENT_DAMAGE_DATA_IS_PHYSICAL = 1
+public constant int EVENT_DAMAGE_DATA_IS_ATTACK   = 2
+public constant int EVENT_DAMAGE_DATA_IS_RANGED   = 3
+public constant int EVENT_DAMAGE_DATA_DAMAGE_TYPE = 4
+public constant int EVENT_DAMAGE_DATA_WEAPON_TYPE = 5
+public constant int EVENT_DAMAGE_DATA_ATTACK_TYPE = 6
+
+public native EXGetEventDamageData (int edd_type) returns int
+public native EXSetEventDamage     (real amount) returns bool
