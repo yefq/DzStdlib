@@ -5,6 +5,15 @@ public tuple abilDataI(int id)
 public tuple abilDataR(int id)
 public tuple abilDataS(int id)
 
+public function abilDataI.op_plus(int value) returns abilDataI
+    return abilDataI(this.id + value)
+
+public function abilDataR.op_plus(int value) returns abilDataR
+    return abilDataR(this.id + value)
+
+public function abilDataS.op_plus(int value) returns abilDataS
+    return abilDataS(this.id + value)
+
 // state
 public constant int ABILITY_STATE_COOLDOWN         = 1
 
@@ -64,3 +73,46 @@ public native EXGetAbilityDataInteger (ability abil, int level, int data_type) r
 public native EXSetAbilityDataInteger (ability abil, int level, int data_type, int value) returns bool
 public native EXGetAbilityDataString  (ability abil, int level, int data_type) returns string
 public native EXSetAbilityDataString  (ability abil, int level, int data_type, string value) returns bool
+
+public function unit.getAbilityDataReal(int abilId, int level, abilDataR data) returns real
+    return EXGetAbilityDataReal(EXGetUnitAbility(this, abilId), level, data.id)
+
+public function unit.getAbilityDataInt(int abilId, int level, abilDataI data) returns int
+    return EXGetAbilityDataInteger(EXGetUnitAbility(this, abilId), level, data.id)
+
+public function unit.getAbilityDataStr(int abilId, int level, abilDataS data) returns string
+    return EXGetAbilityDataString(EXGetUnitAbility(this, abilId), level, data.id)
+
+public function unit.setAbilityDataReal(int abilId, int level, abilDataR data, real value) returns bool
+    return EXSetAbilityDataReal(EXGetUnitAbility(this, abilId), level, data.id, value)
+
+public function unit.setAbilityDataInt(int abilId, int level, abilDataI data, int value) returns bool
+    return EXSetAbilityDataInteger(EXGetUnitAbility(this, abilId), level, data.id, value)
+
+public function unit.setAbilityDataStr(int abilId, int level, abilDataS data, string value) returns bool
+    return EXSetAbilityDataString(EXGetUnitAbility(this, abilId), level, data.id, value)
+
+public function unit.getAbilityCooldownRemaining(int abilId) returns real
+    return EXGetAbilityState(EXGetUnitAbility(this, abilId), ABILITY_STATE_COOLDOWN)
+
+public function unit.setAbilityCooldownRemaining(int abilId, real value) returns bool
+    return EXSetAbilityState(EXGetUnitAbility(this, abilId), ABILITY_STATE_COOLDOWN, value)
+
+// for level 1
+public function unit.getAbilityDataReal(int abilId, abilDataR data) returns real
+    return this.getAbilityDataReal(abilId, 1, data)
+
+public function unit.getAbilityDataInt(int abilId, abilDataI data) returns int
+    return this.getAbilityDataInt(abilId, 1, data)
+
+public function unit.getAbilityDataStr(int abilId, abilDataS data) returns string
+    return this.getAbilityDataStr(abilId, 1, data)
+
+public function unit.setAbilityDataReal(int abilId, abilDataR data, real value) returns bool
+    return this.setAbilityDataReal(abilId, 1, data, value)
+
+public function unit.setAbilityDataInt(int abilId, abilDataI data, int value) returns bool
+    return this.setAbilityDataInt(abilId, 1, data, value)
+
+public function unit.setAbilityDataStr(int abilId, abilDataS data, string value) returns bool
+    return this.setAbilityDataStr(abilId, 1, data, value)

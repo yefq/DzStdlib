@@ -20,6 +20,7 @@ public constant UNIT_STATE_ATTACK1_INITIAL_DELAY        = ConvertUnitState(0x26)
 public constant UNIT_STATE_ATTACK1_BACK_SWING           = ConvertUnitState(0x28)
 public constant UNIT_STATE_ATTACK1_RANGE_BUFFER         = ConvertUnitState(0x27)
 public constant UNIT_STATE_ATTACK1_TARGET_TYPES         = ConvertUnitState(0x29)
+
 public constant UNIT_STATE_ATTACK1_SPILL_DIST           = ConvertUnitState(0x56)
 public constant UNIT_STATE_ATTACK1_SPILL_RADIUS         = ConvertUnitState(0x57)
 public constant UNIT_STATE_ATTACK1_WEAPON_TYPE          = ConvertUnitState(0x58)
